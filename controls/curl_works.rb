@@ -1,7 +1,5 @@
-curl_test = attribute('curl_test', default: '/bin/curl Sleeping /hab/svc/curl/hooks/run')
+curl_test = attribute('curl_test', default: '/bin/curl --version')
 
 describe bash(curl_test) do
-  its('stdout') { should match /echo "Sleeping ..."/ }
-  its('stderr') { should eq '' }
-  its('exit_status') { should eq 0 }
+  its('stdout') { should match /Protocols/ }
 end
