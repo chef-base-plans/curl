@@ -1,2 +1,2 @@
 curl_path: '/bin/curl'
-curl_test: '/bin/curl Sleeping /hab/svc/curl/hooks/run'
+curl_test: '/bin/curl --version'
