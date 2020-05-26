@@ -1,2 +1,0 @@
-curl_path: '/bin/curl'
-curl_test: '/bin/curl --version'
