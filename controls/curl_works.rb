@@ -7,7 +7,7 @@ plan_ident = "#{plan_origin}/#{plan_name}"
 
 control 'core-plans-curl' do
   impact 1.0
-  title 'Ensure libcap curl are working as expected'
+  title 'Ensure curl binaries are working as expected'
   desc '
   To test the binaries that core/curl provides we first check for the installation directory.
   Using this directory we then run checks to that the binary can execute a help/version or similar command.
