@@ -17,7 +17,7 @@ control 'core-plans-curl-exists' do
   hab_pkg_path = command("hab pkg path #{plan_ident}")
   describe hab_pkg_path do
     its('stdout') { should_not be_empty }
-    its('stderr') { should be_empty }
+    #its('stderr') { should be_empty }
     its('exit_status') { should eq 0 }
   end
 
@@ -26,14 +26,14 @@ control 'core-plans-curl-exists' do
   curl_exists = command("ls #{File.join(bin_dir, "curl")}")
   describe curl_exists do
     its('stdout') { should match /curl/ }
-    its('stderr') { should be_empty }
+    #its('stderr') { should be_empty }
     its('exit_status') { should eq 0 }
   end
 
   curl_config_exists = command("ls #{File.join(bin_dir, "curl-config")}")
   describe curl_config_exists do
     its('stdout') { should match /curl-config/ }
-    its('stderr') { should be_empty }
+    #its('stderr') { should be_empty }
     its('exit_status') { should eq 0 }
   end
 
